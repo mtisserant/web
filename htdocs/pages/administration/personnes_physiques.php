@@ -107,7 +107,9 @@ if ($action == 'lister') {
 
     $formulaire->addElement('header' , '' , 'Paramètres');
     $formulaire->addElement('text' , 'compte_svn' , 'Compte SVN' , array('size' => 20, 'maxlength' => 20));
-    $formulaire->addElement('select' , 'niveau' , 'Niveau' , array(AFUP_DROITS_NIVEAU_MEMBRE => 'Membre',
+    $formulaire->addElement('select' , 'niveau' , 'Niveau' , array(
+            AFUP_DROITS_NIVEAU_UTILISATEUR => 'Simple utilisateur',
+            AFUP_DROITS_NIVEAU_MEMBRE => 'Membre',
             AFUP_DROITS_NIVEAU_REDACTEUR => 'Rédacteur',
             AFUP_DROITS_NIVEAU_ADMINISTRATEUR => 'Administrateur'));
     $formulaire->addElement('select' , 'niveau_apero' , 'Apéros PHP' , array(AFUP_DROITS_NIVEAU_MEMBRE => '--',
